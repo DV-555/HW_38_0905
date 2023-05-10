@@ -37,18 +37,19 @@ public class Book {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o)
+    if (this == o) {
       return true;
-    if (!(o instanceof Book))
+    }
+    if (!(o instanceof Book)) {
       return false;
+    }
     Book book = (Book) o;
     return Objects.equals(author, book.author) &&
         Objects.equals(title, book.title);
   }
+
   @Override
   public int hashCode() {
     return author.hashCode() + title.hashCode();
-
-
   }
 }
